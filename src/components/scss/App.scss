@@ -1,0 +1,128 @@
+$bronze: #9f6c35;
+$silver: #7c7c7c;
+$gold: #d2a749;
+
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  margin: auto auto;
+  top: auto;
+  width: 80px;
+  height: 80px;
+}
+.lds-facebook div {
+  // background-color: black;
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #fff;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%,
+  100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+
+.sort-field {
+  text-align: center;
+  margin: auto;
+  background-color: white;
+  width: 80%;
+  border-radius: 5px;
+  &__val {
+    text-align: center;
+    margin: auto;
+    background-color: #ccc;
+    padding: 5px;
+  }
+}
+
+.sort-field__val:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #7c7c7c;
+} 
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  background-color: aliceblue;
+  width: 60%;
+  margin: 5px 0px;
+  border-radius: 5px;
+  min-height: 50px;
+  &__user-info {
+    margin: 5px 50px 5px 10px;
+    background-color: #ccc;
+    border-radius: 50px;
+  }
+}
+
+.per-box {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 100%;
+  background-color: #ccc;
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+  &__avatar {
+    border-radius: 100%;
+    margin: 5px 0 0 5px;
+    width: 30px;
+    height: 30px;
+  }
+  &__login {
+    margin: 10px 0 0 5px;
+    font-size: 18px;
+  }
+  &__contributer {
+    margin: 10px 10px auto auto;
+    &_bronze {
+      color: $bronze;
+    }
+    &_silver {
+      color: $silver;
+    }
+    &_gold {
+      color: $gold;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .per-box {
+    width: 100%;
+    &__wrapper {
+      width: 100%;
+    }
+  }
+  .wrapper {
+    &__user-info {
+      margin: 5px;
+    }
+  }
+}

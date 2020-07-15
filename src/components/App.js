@@ -1,15 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
 
-import './css/App.css';
+import "./css/App.css";
+import TodoItem from "./user-box.js";
 
-class App extends Component {
+export default class App extends Component {
   render() {
-    return (
-      <div>
-        <h1>Hello</h1>
-      </div>
-    );
+    return <TodoItem />;
   }
 }
-
-export default App;
