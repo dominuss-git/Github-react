@@ -63,16 +63,14 @@ function TodoItem() {
   };
 
   const sort = (mode) => {
-    console.log(mode);
     if (mode) {
       help_array.sort((a, b) =>
         a.login.toLowerCase() > b.login.toLowerCase() ? 1 : -1
-      );
-      setData_array((data_array = help_array));
+      );      
     } else {
       help_array.sort((a, b) => (a.contributions < b.contributions ? 1 : -1));
-      setData_array((data_array = help_array));
     }
+    setData_array(data_array = help_array);
   };
 
   return (
